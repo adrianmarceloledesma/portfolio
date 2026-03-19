@@ -33,7 +33,7 @@ export const Header = () => {
           <li><a href="#contact" onClick={closeMenu}>{t.nav.contact}</a></li>
         </ul>
       </nav>
-      {menuOpen && <div className="mobile-overlay" onClick={closeMenu}></div>}
+      <div className={`mobile-overlay ${menuOpen ? 'active' : ''}`} onClick={closeMenu}></div>
     </header>
   );
 };

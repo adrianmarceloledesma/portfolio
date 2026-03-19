@@ -38,8 +38,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1.25rem;
-  background: rgba(240, 240, 237, 0.95);
-  backdrop-filter: blur(14px);
+  background: var(--surface);
   border-bottom: 1px solid var(--border);
 }
 
@@ -133,13 +132,15 @@ nav {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 70%;
-  max-width: 300px;
+  width: 85%;
+  max-width: 320px;
   background: var(--surface);
-  padding: 5rem 2rem 2rem;
-  gap: 1.5rem;
-  box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+  padding: 5rem 1.5rem 2rem;
+  gap: 0;
+  box-shadow: -8px 0 30px rgba(0,0,0,0.15);
   z-index: 100;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
 }
 
 .nav-links a {
@@ -154,8 +155,14 @@ nav {
 }
 
 .nav-links.active a {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  padding: 1rem 0;
   border-bottom: 1px solid var(--border);
+  display: block;
+}
+
+.nav-links.active a:last-child {
+  border-bottom: none;
 }
 
 .nav-links a:hover {
@@ -166,12 +173,13 @@ nav {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.5);
   z-index: 99;
+  backdrop-filter: blur(2px);
 }
 
 @media (max-width: 768px) {
-  .mobile-overlay {
+  .mobile-overlay.active {
     display: block;
   }
 }
