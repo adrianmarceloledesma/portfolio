@@ -13,26 +13,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'Books-search',
-    description: 'Book search engine - search by title or author with Google Books integration.',
-    technologies: ['JavaScript'],
-    githubLink: 'https://github.com/adrianmarceloledesma/Books-search',
-    demoLink: 'https://adrianmarceloledesma.github.io/Books-search/',
-    image: 'https://raw.githubusercontent.com/adrianmarceloledesma/Books-search/master/screenshot.png',
-  },
-
-  {
-    id: 2,
-    title: 'Accordion',
-    description: 'Interactive tennis FAQ accordion built with React and TypeScript.',
-    technologies: ['React', 'TypeScript'],
-    githubLink: 'https://github.com/adrianmarceloledesma/Accordion',
-    demoLink: 'https://accordionargentina.netlify.app/',
-    image: 'https://raw.githubusercontent.com/adrianmarceloledesma/Accordion/master/image.png',
-  },
-  {
-    id: 3,
-    title: 'todo-app',
+    title: 'Todo App',
     description: 'Todo application with localStorage persistence for data.',
     technologies: ['React', 'TypeScript'],
     githubLink: 'https://github.com/adrianmarceloledesma/todo-app',
@@ -40,13 +21,31 @@ export const projects: Project[] = [
     image: myTasksImg,
   },
   {
-    id: 4,
-    title: 'trivia-game',
+    id: 2,
+    title: 'Trivia Game',
     description: 'Fun trivia game to test your knowledge with React and TypeScript.',
     technologies: ['React', 'TypeScript'],
     githubLink: 'https://github.com/adrianmarceloledesma/trivia-game',
     demoLink: 'https://trivia-game2026-kohl.vercel.app/',
-    image: 'https://raw.githubusercontent.com/adrianmarceloledesma/trivia-game/master/image.png',
+    image: 'https://raw.githubusercontent.com/adrianmarceloledesma/trivia-game/master/preview.png',
+  },
+  {
+    id: 3,
+    title: 'Historian Chatbot',
+    description: 'AI-powered chatbot that answers historical questions with accuracy and humor, using Llama 3.3 via Groq API.',
+    technologies: ['React', 'TypeScript', 'Python', 'FastAPI'],
+    githubLink: 'https://github.com/adrianmarceloledesma/historian-chatbot',
+    demoLink: 'https://historian-chatbot-brown.vercel.app/',
+    image: 'https://raw.githubusercontent.com/adrianmarceloledesma/historian-chatbot/master/preview.png'
+  },
+  {
+    id: 4,
+    title: 'Books Search',
+    description: 'Book search engine - search by title or author with Google Books integration.',
+    technologies: ['JavaScript'],
+    githubLink: 'https://github.com/adrianmarceloledesma/Books-search',
+    demoLink: 'https://adrianmarceloledesma.github.io/Books-search/',
+    image: 'https://raw.githubusercontent.com/adrianmarceloledesma/Books-search/master/screenshot.png',
   },
 ];
 
@@ -58,6 +57,7 @@ export const skills = [
   'CSS',
   'Git',
   'Python',
+  'FastAPI',
 ];
 
 export const personalInfo = {
