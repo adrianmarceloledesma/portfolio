@@ -36,7 +36,7 @@ export const projects: Project[] = [
     technologies: ['React', 'TypeScript', 'Python', 'FastAPI'],
     githubLink: 'https://github.com/adrianmarceloledesma/historian-chatbot',
     demoLink: 'https://historian-chatbot-brown.vercel.app/',
-    image: 'https://raw.githubusercontent.com/adrianmarceloledesma/historian-chatbot/master/preview.png'
+    image: 'https://raw.githubusercontent.com/adrianmarceloledesma/historian-chatbot/main/preview.png'
   },
   {
     id: 4,
