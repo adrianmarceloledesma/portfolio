@@ -17,7 +17,11 @@ export const Experience = () => {
               <span className="experience-period">{item.period}</span>
             </div>
             <h4 className="experience-role">{item.role}</h4>
-            <p className="experience-description">{item.description}</p>
+            <ul className="experience-desc-list">
+              {item.description.map((point: string, i: number) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
             <div className="experience-technologies">
               {item.technologies.map((tech: string) => (
                 <span key={tech} className="tech-badge">{tech}</span>

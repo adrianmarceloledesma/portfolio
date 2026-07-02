@@ -28,14 +28,20 @@ export const translations = {
           company: 'Universidad Internacional de La Rioja (UNIR)',
           role: 'Desarrollador de Contenido Web / Maquetador Web',
           period: 'Ago 2021 – Mar 2025',
-          description: 'Transformación de contenido académico desde documentos Word a formatos web estructurados. Aplicación de HTML y CSS para garantizar diseños limpios y responsivos. Mantenimiento de contenido en plataformas CMS y LMS (Ibexa, Canvas, Moodle, LMS30, Sakai). Gestión de despliegues mediante herramientas FTP (Core, Cyberduck). Uso de Jira para seguimiento de tareas y resolución de incidencias.',
+          description: [
+            'Transformación de contenido académico desde documentos Word a formatos web estructurados.',
+            'Aplicación de HTML y CSS para garantizar diseños limpios y responsivos.',
+            'Mantenimiento de contenido en plataformas CMS y LMS (Ibexa, Canvas, Moodle, LMS30, Sakai).',
+            'Gestión de despliegues mediante herramientas FTP (Core, Cyberduck).',
+            'Uso de Jira para seguimiento de tareas y resolución de incidencias.',
+          ],
           technologies: ['HTML', 'CSS', 'Ibexa CMS', 'Canvas', 'Moodle', 'FTP', 'Jira'],
         },
       ]
     },
     skills: {
       label: '// habilidades',
-      title: 'Tecnologias y herramientas'
+      title: 'Habilidades'
     },
     projects: {
       label: '// proyectos',
@@ -99,14 +105,20 @@ export const translations = {
           company: 'Universidad Internacional de La Rioja (UNIR)',
           role: 'Web Content Developer / Web Layout Designer',
           period: 'Aug 2021 – Mar 2025',
-          description: 'Transformation of academic content from Word documents to structured web formats. Application of HTML and CSS to ensure clean and responsive designs. Content maintenance on CMS and LMS platforms (Ibexa, Canvas, Moodle, LMS30, Sakai). Deployment management using FTP tools (Core, Cyberduck). Use of Jira for task tracking and issue resolution.',
+          description: [
+            'Transformation of academic content from Word documents to structured web formats.',
+            'Application of HTML and CSS to ensure clean and responsive designs.',
+            'Content maintenance on CMS and LMS platforms (Ibexa, Canvas, Moodle, LMS30, Sakai).',
+            'Deployment management using FTP tools (Core, Cyberduck).',
+            'Use of Jira for task tracking and issue resolution.',
+          ],
           technologies: ['HTML', 'CSS', 'Ibexa CMS', 'Canvas', 'Moodle', 'FTP', 'Jira'],
         },
       ]
     },
     skills: {
       label: '// skills',
-      title: 'Technologies and tools'
+      title: 'Skills'
     },
     projects: {
       label: '// projects',
