@@ -59,6 +59,9 @@ export const skills = [
   'Python',
   'FastAPI',
   'REST API',
+  'n8n',
+  'MySQL',
+  'Jira',
 ];
 
 export const personalInfo = {

@@ -14,14 +14,27 @@ export const Projects = () => {
           <article key={project.id} className="project-card">
             <span className="project-num">0{index + 1}</span>
             {project.image && (
-              <img
-                src={project.image}
-                alt={project.title}
-                className="project-image"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = 'none';
-                }}
-              />
+              project.demoLink ? (
+                <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="project-image"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
+                  />
+                </a>
+              ) : (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-image"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = 'none';
+                  }}
+                />
+              )
             )}
             <h3 className="project-name">{project.title}</h3>
             <p className="project-desc">{t.projects.items.find((item) => item.id === project.id)?.description}</p>

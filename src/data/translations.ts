@@ -29,13 +29,14 @@ export const translations = {
           role: 'Desarrollador de Contenido Web / Maquetador Web',
           period: 'Ago 2021 – Mar 2025',
           description: [
-            'Transformación de contenido académico desde documentos Word a formatos web estructurados.',
-            'Aplicación de HTML y CSS para garantizar diseños limpios y responsivos.',
-            'Mantenimiento de contenido en plataformas CMS y LMS (Ibexa, Canvas, Moodle, LMS30, Sakai).',
-            'Gestión de despliegues mediante herramientas FTP (Core, Cyberduck).',
+            'Transformación de contenido académico desde documentos Word a formatos web estructurados con HTML y CSS.',
+            'Importación y carga de contenidos educativos a partir de documentos Word en el CMS empresarial Ibexa.',
+            'Revisión y auditoría del material en el CMS, corrigiendo la jerarquía de títulos, la disposición de imágenes y la consistencia de los elementos visuales previos a la publicación.',
+            'Mantenimiento de contenido en plataformas CMS (Ibexa) y LMS (Canvas, Moodle, LMS30, Sakai).',
+            'Gestión de despliegues y transferencia de archivos a servidores utilizando herramientas FTP como Core y Cyberduck.',
             'Uso de Jira para seguimiento de tareas y resolución de incidencias.',
           ],
-          technologies: ['HTML', 'CSS', 'Ibexa CMS', 'Canvas', 'Moodle', 'FTP', 'Jira'],
+          technologies: ['HTML', 'CSS', 'Ibexa CMS', 'Canvas', 'Moodle', 'LMS30', 'Sakai', 'FTP', 'Jira'],
         },
       ]
     },
@@ -69,7 +70,14 @@ export const translations = {
     contact: {
       label: '// contacto',
       title: 'Hablemos',
-      intro: 'Estoy siempre abierto a nuevos proyectos, ideas creativas y oportunidades de colaboracion.'
+      intro: 'Estoy siempre abierto a nuevos proyectos, ideas creativas y oportunidades de colaboracion.',
+      form: {
+        name: 'Nombre',
+        email: 'Email',
+        subject: 'Asunto',
+        message: 'Mensaje',
+        send: 'Enviar mensaje'
+      }
     },
     footer: {
       nav: 'Navegacion',
@@ -106,13 +114,14 @@ export const translations = {
           role: 'Web Content Developer / Web Layout Designer',
           period: 'Aug 2021 – Mar 2025',
           description: [
-            'Transformation of academic content from Word documents to structured web formats.',
-            'Application of HTML and CSS to ensure clean and responsive designs.',
-            'Content maintenance on CMS and LMS platforms (Ibexa, Canvas, Moodle, LMS30, Sakai).',
-            'Deployment management using FTP tools (Core, Cyberduck).',
-            'Use of Jira for task tracking and issue resolution.',
+            'Transformed academic content from Word documents into structured web formats using HTML and CSS.',
+            'Imported and uploaded educational content from Word documents into the Ibexa enterprise CMS.',
+            'Reviewed and audited material within the CMS, correcting heading hierarchies, image layouts, and visual consistency prior to publication.',
+            'Maintained content across CMS (Ibexa) and LMS platforms (Canvas, Moodle, LMS30, Sakai).',
+            'Managed deployments and file transfers to servers utilizing FTP tools like Core and Cyberduck.',
+            'Utilized Jira for task tracking and issue resolution.',
           ],
-          technologies: ['HTML', 'CSS', 'Ibexa CMS', 'Canvas', 'Moodle', 'FTP', 'Jira'],
+          technologies: ['HTML', 'CSS', 'Ibexa CMS', 'Canvas', 'Moodle', 'LMS30', 'Sakai', 'FTP', 'Jira'],
         },
       ]
     },
@@ -146,7 +155,14 @@ export const translations = {
     contact: {
       label: '// contact',
       title: "Let's talk",
-      intro: "I'm always open to new projects, creative ideas, and collaboration opportunities."
+      intro: "I'm always open to new projects, creative ideas, and collaboration opportunities.",
+      form: {
+        name: 'Name',
+        email: 'Email',
+        subject: 'Subject',
+        message: 'Message',
+        send: 'Send message'
+      }
     },
     footer: {
       nav: 'Navigation',

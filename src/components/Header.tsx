@@ -1,15 +1,23 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 export const Header = () => {
   const { lang, setLang, t } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [atTop, setAtTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => setAtTop(window.scrollY < window.innerHeight * 0.3);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <header>
-      <nav>
+      <nav className={atTop ? 'nav--transparent' : ''}>
         <button 
           className="lang-toggle"
           onClick={() => setLang(lang === 'es' ? 'en' : 'es')}
