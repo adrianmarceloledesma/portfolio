@@ -1,12 +1,13 @@
 import { personalInfo } from '../data/projects';
 import { useLanguage } from '../context/LanguageContext';
+import { useInView } from '../hooks/useInView';
 
 export const Contact = () => {
   const { t } = useLanguage();
+  const { ref, isVisible } = useInView();
 
   return (
-    <section id="contact">
-      <div className="section-label">{t.contact.label}</div>
+    <section id="contact" ref={ref} className={`animate-section ${isVisible ? 'animate-visible' : ''}`}>
       <h2 className="section-title">{t.contact.title}</h2>
       <p className="contact-intro">{t.contact.intro}</p>
       

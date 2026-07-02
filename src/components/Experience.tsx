@@ -1,11 +1,12 @@
 import { useLanguage } from '../context/LanguageContext';
+import { useInView } from '../hooks/useInView';
 
 export const Experience = () => {
   const { t } = useLanguage();
+  const { ref, isVisible } = useInView();
 
   return (
-    <section id="experience">
-      <div className="section-label">{t.experience.label}</div>
+    <section id="experience" ref={ref} className={`animate-section ${isVisible ? 'animate-visible' : ''}`}>
       <h2 className="section-title">{t.experience.title}</h2>
       <div className="experience-list">
         {t.experience.items.map((item, index) => (

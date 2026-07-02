@@ -1,12 +1,13 @@
 import { projects } from '../data/projects';
 import { useLanguage } from '../context/LanguageContext';
+import { useInView } from '../hooks/useInView';
 
 export const Projects = () => {
   const { t } = useLanguage();
+  const { ref, isVisible } = useInView();
 
   return (
-    <section id="projects">
-      <div className="section-label">{t.projects.label}</div>
+    <section id="projects" ref={ref} className={`animate-section ${isVisible ? 'animate-visible' : ''}`}>
       <h2 className="section-title">{t.projects.title}</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (

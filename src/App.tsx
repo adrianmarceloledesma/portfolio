@@ -1,3 +1,4 @@
+import { useState, useCallback } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -6,11 +7,23 @@ import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { NetworkCanvas } from './components/NetworkCanvas';
+import { LoadingScreen } from './components/LoadingScreen';
+import { ScrollToTop } from './components/ScrollToTop';
 import { LanguageProvider } from './context/LanguageContext';
 
-function App() {
+function AppContent() {
+  const [loading, setLoading] = useState(true);
+
+  const handleFinish = useCallback(() => setLoading(false), []);
+
+  if (loading) {
+    return <LoadingScreen onFinish={handleFinish} />;
+  }
+
   return (
-    <LanguageProvider>
+    <>
+      <NetworkCanvas />
       <Header />
       <main>
         <Hero />
@@ -21,6 +34,15 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
     </LanguageProvider>
   );
 }

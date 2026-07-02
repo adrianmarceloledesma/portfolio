@@ -10,14 +10,14 @@ export const translations = {
     },
     hero: {
       tag: '// portafolio',
-      cta1: 'Ver proyectos',
-      cta2: 'Contactar',
+      greeting: '¡Hola! Soy',
+      role: 'Web Developer',
       scroll: 'scroll'
     },
     about: {
       label: '// sobre mi',
       title: 'Acerca de mí',
-      bio: 'Soy un Frontend Developer con experiencia en gestión de contenidos, plataformas e-learning y tecnologías front-end.\n\nEn UNIR trabajé con HTML, CSS y el CMS Ibexa, administrando contenidos y mejorando la experiencia de usuario. También gestioné plataformas de aprendizaje como Moodle y Canvas, optimizando su rendimiento y brindando soporte técnico.\n\nMi stack incluye React.js, TypeScript y JavaScript (ES6+), con foco en construir interfaces limpias, funcionales y bien estructuradas.'
+      bio: 'Me llamo Marcelo Ledesma, soy Desarrollador Web y vivo en Buenos Aires. Inicié mi camino en 2020 al formarme como Desarrollador Web Full Stack y, desde entonces, mantengo una sólida curiosidad por las nuevas tecnologías que me impulsa a evolucionar constantemente.\n\nCuento con experiencia en tecnologías front-end, gestión de contenidos y entornos e-learning. Durante mi trayectoria en UNIR, administré contenidos mediante HTML, CSS y el CMS Ibexa, colaborando estrechamente con equipos multidisciplinares para optimizar la experiencia del usuario final.\n\nAsimismo, la gestión y el soporte técnico en plataformas críticas como Moodle y Canvas consolidaron mi agilidad para resolver problemas bajo presión, actuando como un puente confiable entre la tecnología y las necesidades operativas.\n\nActualmente, potencio mis flujos de trabajo mediante la integración de herramientas de Inteligencia Artificial y automatizaciones, buscando elevar la calidad y velocidad de mis proyectos.'
     },
     experience: {
       label: '// experiencia',
@@ -39,8 +39,12 @@ export const translations = {
     },
     projects: {
       label: '// proyectos',
-      title: 'Trabajo seleccionado',
+      title: 'Portfolio',
       items: [
+        {
+          id: 4,
+          description: 'Sitio web profesional para servicios de corrección, transcripción y normalización de textos'
+        },
         {
           id: 1,
           description: 'Aplicación Todo con persistencia en localStorage para guardar tus tareas.'
@@ -52,9 +56,10 @@ export const translations = {
         {
           id: 3,
           description: 'Chatbot con IA que responde preguntas históricas con precisión y humor.'
-        }
+        },
       ]
     },
+
     contact: {
       label: '// contacto',
       title: 'Hablemos',
@@ -76,14 +81,14 @@ export const translations = {
     },
     hero: {
       tag: '// portfolio',
-      cta1: 'View projects',
-      cta2: 'Contact',
+      greeting: "Hello! I'm",
+      role: 'Web Developer',
       scroll: 'scroll'
     },
     about: {
       label: '// about me',
       title: 'About me',
-      bio: "I'm a Frontend Developer with experience in content management, e-learning platforms, and front-end technologies.\n\nAt UNIR, I worked with HTML, CSS, and the Ibexa CMS, handling content administration and improving user experience. I also managed learning platforms like Moodle and Canvas, optimizing their performance and providing technical support.\n\nMy stack includes React.js, TypeScript, and JavaScript (ES6+), with a focus on building clean, functional, and well-structured interfaces."
+      bio: "My name is Marcelo Ledesma, I'm a Web Developer and I live in Buenos Aires. I started my journey in 2020 training as a Full Stack Web Developer and, ever since, I've maintained a strong curiosity for new technologies that drives me to constantly evolve.\n\nI have experience in front-end technologies, content management, and e-learning environments. During my time at UNIR, I managed content using HTML, CSS, and the Ibexa CMS, working closely with multidisciplinary teams to optimize the end-user experience.\n\nFurthermore, managing and providing technical support for critical platforms like Moodle and Canvas strengthened my ability to solve problems under pressure, acting as a reliable bridge between technology and operational needs.\n\nCurrently, I enhance my workflows by integrating Artificial Intelligence tools and automations, seeking to elevate the quality and speed of my projects."
     },
     experience: {
       label: '// experience',
@@ -105,8 +110,12 @@ export const translations = {
     },
     projects: {
       label: '// projects',
-      title: 'Selected work',
+      title: 'Portfolio',
       items: [
+        {
+          id: 4,
+          description: 'Professional website for proofreading, transcription and text normalization services'
+        },
         {
           id: 1,
           description: 'Todo application with localStorage persistence for data.'
@@ -118,9 +127,10 @@ export const translations = {
         {
           id: 3,
           description: 'AI-powered chatbot that answers historical questions with accuracy and humor.'
-        }
+        },
       ]
     },
+
     contact: {
       label: '// contact',
       title: "Let's talk",

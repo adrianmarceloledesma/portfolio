@@ -1,4 +1,5 @@
-import myTasksImg from '../img/mytasks.png' 
+import myTasksImg from '../assets/projects/mytasks.webp'
+import deleaturImg from '../assets/projects/deleatur.webp'
 
 export interface Project {
   id: number;
@@ -11,6 +12,14 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: 4,
+    title: 'Deleatur',
+    description: 'Sitio web profesional para servicios de corrección, transcripción y normalización de textos con CMS headless.',
+    technologies: ['React', 'JavaScript', 'CSS', 'Decap CMS'],
+    demoLink: 'https://deleaturservicioseditoriales.vercel.app/',
+    image: deleaturImg,
+  },
   {
     id: 1,
     title: 'Todo App',
@@ -38,7 +47,6 @@ export const projects: Project[] = [
     demoLink: 'https://historian-chatbot-brown.vercel.app/',
     image: 'https://raw.githubusercontent.com/adrianmarceloledesma/historian-chatbot/main/preview.png'
   },
-
 ];
 
 export const skills = [
