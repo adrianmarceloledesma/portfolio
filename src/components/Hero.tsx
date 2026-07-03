@@ -3,7 +3,7 @@ import { TypeWriter } from './TypeWriter';
 import heroImg from '../assets/hero/hero.webp';
 
 const esStrings = [
-  'Creo aplicaciones web con React y TypeScript',
+  'Creo aplicaciones web funcionales y atractivas',
   'Construyo interfaces limpias y funcionales',
   'Transformo diseños en código',
   'Siempre aprendiendo nuevas tecnologías',

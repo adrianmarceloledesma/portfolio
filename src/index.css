@@ -265,7 +265,14 @@ nav {
 
 @media (min-width: 1024px) {
   .hero-inner {
+    justify-content: space-between;
     gap: 6rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-inner {
+    padding: 0 7rem;
   }
 }
 
