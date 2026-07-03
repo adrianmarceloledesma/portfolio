@@ -42,10 +42,6 @@ export const Hero = () => {
           />
         </div>
       </div>
-      <div className="hero-scroll">
-        <span className="scroll-line"></span>
-        <span>{t.hero.scroll}</span>
-      </div>
     </section>
   );
 };

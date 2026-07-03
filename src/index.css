@@ -221,7 +221,7 @@ nav {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 5rem 1.25rem 2rem;
+  padding: 4rem 1.25rem 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -398,34 +398,6 @@ nav {
   color: #fff;
 }
 
-.hero-scroll {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  color: var(--muted);
-  letter-spacing: 0.1em;
-  opacity: 0;
-  animation: fadeUp 0.7s ease forwards 1s;
-}
-
-@media (min-width: 769px) {
-  .hero-scroll {
-    bottom: 2.5rem;
-    left: 3rem;
-  }
-}
-
-.scroll-line {
-  width: 48px;
-  height: 1px;
-  background: var(--muted);
-}
 
 section {
   padding: 3rem 1.25rem;
@@ -718,7 +690,14 @@ section {
   border: 1px solid var(--border);
   border-radius: 14px;
   min-width: 100px;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.animate-section.animate-visible .skill-card {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .skill-card:hover {

@@ -53,8 +53,8 @@ export const Skills = () => {
       <h2 className="section-title">{t.skills.title}</h2>
       <div className="skills-surface">
         <div className="skill-cards">
-        {skills.map((skill) => (
-          <div key={skill} className="skill-card">
+        {skills.map((skill, i) => (
+          <div key={skill} className="skill-card" style={{ transitionDelay: `${i * 0.06}s` }}>
             <span className="skill-card-icon">
               {skillIcons[skill] || <SiJavascript />}
             </span>
