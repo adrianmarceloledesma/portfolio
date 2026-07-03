@@ -8,14 +8,11 @@ export const useInView = (options?: IntersectionObserverInit): { ref: RefObject<
     const element = ref.current;
     if (!element) return;
 
-    const merged: IntersectionObserverInit = { threshold: 0.1, ...options };
+    const merged: IntersectionObserverInit = { threshold: 0.3, ...options };
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(element);
-        }
+        setIsVisible(entry.isIntersecting);
       },
       merged
     );

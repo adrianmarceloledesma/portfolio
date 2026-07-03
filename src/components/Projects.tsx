@@ -11,8 +11,7 @@ export const Projects = () => {
       <h2 className="section-title">{t.projects.title}</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <article key={project.id} className="project-card">
-            <span className="project-num">0{index + 1}</span>
+          <article key={project.id} className="project-card" style={{ transitionDelay: `${index * 0.1}s` }}>
             {project.image && (
               project.demoLink ? (
                 <a href={project.demoLink} target="_blank" rel="noopener noreferrer">

@@ -246,7 +246,7 @@ nav {
   justify-content: center;
   flex: 1;
   gap: 4rem;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   width: 100%;
 }
@@ -260,6 +260,12 @@ nav {
 @media (min-width: 769px) {
   .hero-inner {
     padding: 0 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-inner {
+    gap: 6rem;
   }
 }
 
@@ -590,10 +596,12 @@ section {
   padding: 1.5rem;
   position: relative;
   overflow: hidden;
-  transition: background 0.2s;
+  transition: opacity 0.6s ease, transform 0.6s ease, background 0.2s;
   border: 1px solid var(--border);
   border-radius: 0.75rem;
   flex: 1;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .experience-item::before {
@@ -697,7 +705,7 @@ section {
   border-radius: 14px;
   min-width: 100px;
   opacity: 0;
-  transform: translateY(15px);
+  transform: translateY(-15px);
   transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -764,11 +772,13 @@ section {
   padding: 1.5rem;
   position: relative;
   overflow: hidden;
-  transition: background 0.2s;
+  transition: opacity 0.6s ease, transform 0.6s ease, background 0.2s;
   border: 1px solid var(--border);
   border-radius: 0.75rem;
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .project-card::before {
@@ -792,13 +802,6 @@ section {
   transform: scaleX(1);
 }
 
-.project-num {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  color: var(--muted);
-  letter-spacing: 0.1em;
-  margin-bottom: 1.25rem;
-}
 
 .project-name {
   font-size: 1.15rem;
@@ -1003,7 +1006,9 @@ section {
   background: var(--surface);
   border: 1px solid var(--border);
   text-decoration: none;
-  transition: border-color 0.2s, background 0.2s;
+  transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.2s, background 0.2s;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .contact-item:hover {
@@ -1200,10 +1205,100 @@ footer::before {
   transform: translateY(0);
 }
 
+/* About section individual child animations */
+#about .section-title,
+.animate-section .about-text,
+.animate-section .about-image-wrapper {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#about .section-title,
+.animate-section .about-text {
+  transform: translateY(20px);
+}
+
+.animate-section .about-image-wrapper {
+  transform: translateX(40px);
+}
+
+#about.animate-visible .section-title {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.animate-section.animate-visible .about-text {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+.animate-section.animate-visible .about-image-wrapper {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.7s;
+}
+
+/* Global section title entrance */
+.animate-section .section-title {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-section.animate-visible .section-title {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+/* Cards and items stagger entrance */
+.animate-section.animate-visible .project-card,
+.animate-section.animate-visible .experience-item,
+.animate-section.animate-visible .contact-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact intro and form */
+.animate-section .contact-intro,
+.animate-section .contact-form {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-section.animate-visible .contact-intro {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+.animate-section.animate-visible .contact-form {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.7s;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-section {
     opacity: 1;
     transform: none;
+  }
+
+  #about .section-title,
+  .animate-section .about-text,
+  .animate-section .about-image-wrapper,
+  .animate-section .section-title,
+  .animate-section .project-card,
+  .animate-section .experience-item,
+  .animate-section .contact-intro,
+  .animate-section .contact-form,
+  .animate-section .contact-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 
