@@ -293,6 +293,7 @@ nav {
   height: auto;
   display: block;
   filter: drop-shadow(0 8px 24px rgba(0,0,0,0.1));
+  animation: float 4s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
@@ -1307,6 +1308,10 @@ footer::before {
     transform: none;
     transition: none;
   }
+
+  .hero-image {
+    animation: none;
+  }
 }
 
 .typewriter-cursor {
@@ -1361,6 +1366,11 @@ footer::before {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 
