@@ -226,6 +226,12 @@ nav {
   overflow: hidden;
 }
 
+@media (max-width: 480px) {
+  #home {
+    padding: 0;
+  }
+}
+
 @media (min-width: 769px) {
   #home {
     width: 100%;
@@ -346,7 +352,7 @@ nav {
   font-family: var(--font-mono);
   font-size: clamp(0.8rem, 1.3vw, 0.9rem);
   color: var(--muted);
-  min-height: 1.8em;
+  min-height: 3.2em;
   line-height: 1.6;
   max-width: 480px;
   opacity: 0;
