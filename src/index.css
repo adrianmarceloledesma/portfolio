@@ -99,8 +99,8 @@ nav {
 }
 
 .nav-logo {
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 900;
   letter-spacing: 0.05em;
   color: var(--blue);
   font-family: var(--font-mono);
