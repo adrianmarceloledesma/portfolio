@@ -343,7 +343,7 @@ nav {
   letter-spacing: -0.02em;
   color: var(--text);
   opacity: 0;
-  animation: fadeUp 0.7s ease forwards 0.4s;
+  animation: fadeUp 0.4s ease forwards 0.2s;
 }
 
 .hero-name span {
@@ -358,7 +358,7 @@ nav {
   color: var(--blue);
   letter-spacing: 0.05em;
   opacity: 0;
-  animation: fadeUp 0.6s ease forwards 0.6s;
+  animation: fadeUp 0.35s ease forwards 0.3s;
 }
 
 .hero-typewriter {
@@ -370,7 +370,7 @@ nav {
   line-height: 1.6;
   max-width: 480px;
   opacity: 0;
-  animation: fadeUp 0.6s ease forwards 0.6s;
+  animation: fadeUp 0.35s ease forwards 0.3s;
 }
 
 .about-content {
@@ -604,7 +604,7 @@ section {
   padding: 1.5rem;
   position: relative;
   overflow: hidden;
-  transition: opacity 0.6s ease, transform 0.6s ease, background 0.2s;
+  transition: opacity 0.35s ease, transform 0.35s ease, background 0.2s;
   border: 1px solid var(--border);
   border-radius: 0.75rem;
   flex: 1;
@@ -714,7 +714,7 @@ section {
   min-width: 100px;
   opacity: 0;
   transform: translateY(-15px);
-  transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: opacity 0.25s ease, transform 0.25s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .animate-section.animate-visible .skill-card {
@@ -780,7 +780,7 @@ section {
   padding: 1.5rem;
   position: relative;
   overflow: hidden;
-  transition: opacity 0.6s ease, transform 0.6s ease, background 0.2s;
+  transition: opacity 0.35s ease, transform 0.35s ease, background 0.2s;
   border: 1px solid var(--border);
   border-radius: 0.75rem;
   display: flex;
@@ -1015,7 +1015,7 @@ section {
   background: var(--surface);
   border: 1px solid var(--border);
   text-decoration: none;
-  transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.2s, background 0.2s;
+  transition: opacity 0.35s ease, transform 0.35s ease, border-color 0.2s, background 0.2s;
   opacity: 0;
   transform: translateY(20px);
 }
@@ -1206,7 +1206,7 @@ footer::before {
 .animate-section {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .animate-section.animate-visible {
@@ -1219,7 +1219,7 @@ footer::before {
 .animate-section .about-text,
 .animate-section .about-image-wrapper {
   opacity: 0;
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
 #about .section-title,
@@ -1234,32 +1234,32 @@ footer::before {
 #about.animate-visible .section-title {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.3s;
+  transition-delay: 0.15s;
 }
 
 .animate-section.animate-visible .about-text {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.5s;
+  transition-delay: 0.25s;
 }
 
 .animate-section.animate-visible .about-image-wrapper {
   opacity: 1;
   transform: translateX(0);
-  transition-delay: 0.7s;
+  transition-delay: 0.3s;
 }
 
 /* Global section title entrance */
 .animate-section .section-title {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
 .animate-section.animate-visible .section-title {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.3s;
+  transition-delay: 0.15s;
 }
 
 /* Cards and items stagger entrance */
@@ -1275,19 +1275,19 @@ footer::before {
 .animate-section .contact-form {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
 .animate-section.animate-visible .contact-intro {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.5s;
+  transition-delay: 0.2s;
 }
 
 .animate-section.animate-visible .contact-form {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.7s;
+  transition-delay: 0.3s;
 }
 
 @media (prefers-reduced-motion: reduce) {

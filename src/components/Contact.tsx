@@ -78,21 +78,21 @@ export const Contact = () => {
         </form>
 
         <div className="contact-links">
-          <a href={`mailto:${personalInfo.email}`} className="contact-item" style={{ transitionDelay: '0.9s' }}>
+          <a href={`mailto:${personalInfo.email}`} className="contact-item" style={{ transitionDelay: '0.2s' }}>
             <span className="contact-icon"><FiMail size={16} /></span>
             <div>
               <span className="contact-item-label">Email</span>
               <span className="contact-item-value">{personalInfo.email}</span>
             </div>
           </a>
-          <a href={`https://github.com/${personalInfo.github}`} target="_blank" rel="noopener noreferrer" className="contact-item" style={{ transitionDelay: '1s' }}>
+          <a href={`https://github.com/${personalInfo.github}`} target="_blank" rel="noopener noreferrer" className="contact-item" style={{ transitionDelay: '0.25s' }}>
             <span className="contact-icon"><FaGithub size={16} /></span>
             <div>
               <span className="contact-item-label">GitHub</span>
               <span className="contact-item-value">/{personalInfo.github}</span>
             </div>
           </a>
-          <a href={`https://linkedin.com/in/${personalInfo.linkedin}`} target="_blank" rel="noopener noreferrer" className="contact-item" style={{ transitionDelay: '1.1s' }}>
+          <a href={`https://linkedin.com/in/${personalInfo.linkedin}`} target="_blank" rel="noopener noreferrer" className="contact-item" style={{ transitionDelay: '0.3s' }}>
             <span className="contact-icon"><FaLinkedin size={16} /></span>
             <div>
               <span className="contact-item-label">LinkedIn</span>

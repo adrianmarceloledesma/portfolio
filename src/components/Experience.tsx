@@ -10,7 +10,7 @@ export const Experience = () => {
       <h2 className="section-title">{t.experience.title}</h2>
       <div className="experience-list">
         {t.experience.items.map((item, index) => (
-          <article key={item.id} className="experience-item" style={{ transitionDelay: `${index * 0.1}s` }}>
+          <article key={item.id} className="experience-item" style={{ transitionDelay: `${index * 0.06}s` }}>
             <div className="experience-header">
               <h3 className="experience-company">{item.company}</h3>
               <span className="experience-period">{item.period}</span>

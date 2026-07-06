@@ -12,7 +12,7 @@ export const Projects = () => {
       <h2 className="section-title">{t.projects.title}</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <article key={project.id} className="project-card" style={{ transitionDelay: `${index * 0.1}s` }}>
+          <article key={project.id} className="project-card" style={{ transitionDelay: `${index * 0.06}s` }}>
             <ProjectMedia
               video={project.video}
               image={project.image}
