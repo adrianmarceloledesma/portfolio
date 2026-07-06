@@ -154,10 +154,9 @@ async function recordProject(project) {
 
   try {
     await page.goto(project.url, { waitUntil: 'domcontentloaded', timeout: 30000 });
-    await page.waitForTimeout(3000);
+    await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {});
   } catch (err) {
     console.log(`  Load warning: ${err.message}`);
-    await page.waitForTimeout(3000);
   }
 
   await runInteractions(page, project.interactions);

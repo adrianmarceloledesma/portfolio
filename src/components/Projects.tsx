@@ -18,6 +18,7 @@ export const Projects = () => {
               image={project.image}
               title={project.title}
               demoLink={project.demoLink}
+              sectionVisible={isVisible}
             />
             <h3 className="project-name">{project.title}</h3>
             <p className="project-desc">{t.projects.items.find((item) => item.id === project.id)?.description}</p>
