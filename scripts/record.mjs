@@ -20,21 +20,14 @@ const SEAMLESS_PROJECTS = ['deleatur', 'trivia-game']; // static UIs, safe to re
 
 function triviaInteractions() {
   const actions = [
-    { type: 'wait', ms: 2000 },
+    { type: 'wait', ms: 1000 },
     { type: 'click', selector: 'input[value="Start Quiz"]' },
-    { type: 'wait', ms: 3000 },
+    { type: 'wait', ms: 1000 },
   ];
   for (let i = 0; i < 10; i++) {
     actions.push({ type: 'click', selector: 'button' });
-    actions.push({ type: 'wait', ms: 2700 });
+    actions.push({ type: 'wait', ms: 1500 });
   }
-  actions.push(
-    { type: 'wait', ms: 2000 },
-    { type: 'click', selector: '.menu-burg-icon' },
-    { type: 'wait', ms: 500 },
-    { type: 'click', selector: 'a[href="/stats"]' },
-    { type: 'wait', ms: 1500 },
-  );
   return actions;
 }
 
@@ -75,15 +68,16 @@ const PROJECTS = [
   {
     name: 'historian-chatbot',
     url: 'https://historian-chatbot-brown.vercel.app/',
+    recordSeconds: 2,
     interactions: [
       { type: 'click', selector: 'input' },
       { type: 'type', text: 'Tell me about Maradona' },
       { type: 'press', key: 'Enter' },
-      { type: 'wait', ms: 8000 },
+      { type: 'wait', ms: 1500 },
       { type: 'click', selector: 'input' },
       { type: 'type', text: 'And what about Messi?' },
       { type: 'press', key: 'Enter' },
-      { type: 'wait', ms: 8000 },
+      { type: 'wait', ms: 1500 },
     ],
   },
 ];
@@ -150,6 +144,19 @@ async function recordProject(project) {
 
   if (project.name === 'historian-chatbot') {
     await page.route('**/api/ping', route => route.fulfill({ status: 200 }));
+
+    let chatCount = 0;
+    await page.route('**/api/chat', route => {
+      chatCount++;
+      const reply = chatCount === 1
+        ? 'Diego Armando Maradona was an Argentine football legend who led Argentina to the 1986 World Cup title. He is remembered for his dribbling skill, the "Hand of God" goal, and a stunning solo run against England in the same match.'
+        : 'Lionel Messi, often compared to Maradona, is another Argentine great who won the World Cup in 2022. His style is more graceful and efficient, but both share extraordinary vision and dribbling that set them apart as all-time legends.';
+      route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({ reply }),
+      });
+    });
   }
 
   try {
@@ -161,7 +168,7 @@ async function recordProject(project) {
 
   await runInteractions(page, project.interactions);
 
-  await page.waitForTimeout(RECORD_SECONDS * 1000);
+  await page.waitForTimeout((project.recordSeconds ?? RECORD_SECONDS) * 1000);
 
   await context.close();
   await browser.close();
@@ -183,6 +190,7 @@ async function recordProject(project) {
     rmSync(mp4RawPath);
   } else {
     const fs = await import('fs');
+    if (existsSync(mp4FinalPath)) rmSync(mp4FinalPath);
     fs.renameSync(mp4RawPath, mp4FinalPath);
   }
 
