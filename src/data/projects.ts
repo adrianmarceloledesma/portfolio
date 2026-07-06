@@ -1,5 +1,9 @@
 import myTasksImg from '../assets/projects/mytasks.webp'
 import deleaturImg from '../assets/projects/deleatur.webp'
+import deleaturVideo from '../assets/projects/deleatur.mp4'
+import myTasksVideo from '../assets/projects/mytasks.mp4'
+import triviaGameVideo from '../assets/projects/trivia-game.mp4'
+import historianChatbotVideo from '../assets/projects/historian-chatbot.mp4'
 
 export interface Project {
   id: number;
@@ -9,6 +13,7 @@ export interface Project {
   githubLink?: string;
   demoLink?: string;
   image?: string;
+  video?: string;
 }
 
 export const projects: Project[] = [
@@ -19,6 +24,7 @@ export const projects: Project[] = [
     technologies: ['React', 'JavaScript', 'CSS', 'Decap CMS'],
     demoLink: 'https://deleaturservicioseditoriales.vercel.app/',
     image: deleaturImg,
+    video: deleaturVideo,
   },
   {
     id: 1,
@@ -28,6 +34,7 @@ export const projects: Project[] = [
     githubLink: 'https://github.com/adrianmarceloledesma/todo-app',
     demoLink: 'https://mytasksargentina.netlify.app',
     image: myTasksImg,
+    video: myTasksVideo,
   },
   {
     id: 2,
@@ -37,6 +44,7 @@ export const projects: Project[] = [
     githubLink: 'https://github.com/adrianmarceloledesma/trivia-game',
     demoLink: 'https://trivia-game2026-kohl.vercel.app/',
     image: 'https://raw.githubusercontent.com/adrianmarceloledesma/trivia-game/master/preview.png',
+    video: triviaGameVideo,
   },
   {
     id: 3,
@@ -45,7 +53,8 @@ export const projects: Project[] = [
     technologies: ['React', 'TypeScript', 'Python', 'FastAPI', 'REST API'],
     githubLink: 'https://github.com/adrianmarceloledesma/historian-chatbot',
     demoLink: 'https://historian-chatbot-brown.vercel.app/',
-    image: 'https://raw.githubusercontent.com/adrianmarceloledesma/historian-chatbot/main/preview.png'
+    image: 'https://raw.githubusercontent.com/adrianmarceloledesma/historian-chatbot/main/preview.png',
+    video: historianChatbotVideo,
   },
 ];
 

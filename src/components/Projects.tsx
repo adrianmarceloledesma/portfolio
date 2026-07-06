@@ -1,6 +1,7 @@
 import { projects } from '../data/projects';
 import { useLanguage } from '../context/LanguageContext';
 import { useInView } from '../hooks/useInView';
+import { ProjectMedia } from './ProjectMedia';
 
 export const Projects = () => {
   const { t } = useLanguage();
@@ -12,29 +13,12 @@ export const Projects = () => {
       <div className="projects-grid">
         {projects.map((project, index) => (
           <article key={project.id} className="project-card" style={{ transitionDelay: `${index * 0.1}s` }}>
-            {project.image && (
-              project.demoLink ? (
-                <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="project-image"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = 'none';
-                    }}
-                  />
-                </a>
-              ) : (
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="project-image"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = 'none';
-                  }}
-                />
-              )
-            )}
+            <ProjectMedia
+              video={project.video}
+              image={project.image}
+              title={project.title}
+              demoLink={project.demoLink}
+            />
             <h3 className="project-name">{project.title}</h3>
             <p className="project-desc">{t.projects.items.find((item) => item.id === project.id)?.description}</p>
             <div className="project-tech">

@@ -20,6 +20,10 @@ npm run preview          # Preview production build locally
 npm run build            # Run TypeScript check + Vite production build
 npm run lint             # Run ESLint on all files
 npm run lint -- --fix    # Auto-fix ESLint issues
+
+# Project Videos
+npm run record                      # Record/update all project demo videos automatically
+npm run record -- --project=deleatur  # Record a single project (deleatur, mytasks, trivia-game, historian-chatbot)
 ```
 
 **No test framework installed.** To add tests, install Vitest:
