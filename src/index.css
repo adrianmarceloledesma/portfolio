@@ -253,7 +253,7 @@ nav {
 
 @media (max-width: 768px) {
   .hero-inner {
-    margin-top: calc(2rem - 25px);
+    margin-top: calc(2rem - 30px);
   }
 }
 
