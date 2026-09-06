@@ -38,6 +38,20 @@ export const translations = {
           ],
           technologies: ['HTML', 'CSS', 'Ibexa CMS', 'Canvas', 'Moodle', 'LMS30', 'Sakai', 'FTP', 'Jira'],
         },
+        {
+          id: 2,
+          company: 'NetDreams S. R. L.',
+          role: 'Especialista en Gestión de Activos Digitales',
+          period: 'Ago 2025 – Presente',
+          description: [
+            'Gestión y publicación de activos digitales y contenidos web para clientes internacionales, con foco en calidad, consistencia y cumplimiento de estándares corporativos.',
+            'Operación diaria en Adobe Experience Manager (AEM) como plataforma CMS/DAM principal.',
+            'Gestión de solicitudes y tickets a través de Salesforce, incluyendo categorización y seguimiento.',
+            'Verificación de licencias y derechos de uso asociados a activos digitales.',
+            'Control de calidad visual, funcional y textual de sitios web.',
+          ],
+          technologies: ['Adobe Experience Manager', 'Salesforce', 'DAM', 'IA'],
+        }
       ]
     },
     skills: {
@@ -123,6 +137,20 @@ export const translations = {
           ],
           technologies: ['HTML', 'CSS', 'Ibexa CMS', 'Canvas', 'Moodle', 'LMS30', 'Sakai', 'FTP', 'Jira'],
         },
+        {
+          id: 2,
+          company: 'NetDreams S. R. L.',
+          role: 'Digital Asset Specialist',
+          period: 'Mar 2025 – Present',
+          description: [
+            'Managed and published digital assets and web content for international clients, with a focus on quality, consistency, and compliance with corporate standards.',
+            'Performed daily operations in Adobe Experience Manager (AEM) as the main CMS/DAM platform.',
+            'Managed requests and tickets through Salesforce, including categorization and follow-up.',
+            'Verified licenses and usage rights associated with digital assets.',
+            'Conducted visual, functional, and textual quality control for websites.',
+          ],
+          technologies: ['Adobe Experience Manager', 'Salesforce', 'DAM', 'AI'],
+        }
       ]
     },
     skills: {
