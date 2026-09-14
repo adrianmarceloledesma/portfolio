@@ -35,6 +35,7 @@ const PROJECTS = [
   {
     name: 'deleatur',
     url: 'https://deleaturservicioseditoriales.vercel.app/',
+    viewport: { width: 1280, height: 720 },
     interactions: [],
   },
   {
@@ -136,7 +137,7 @@ async function recordProject(project) {
 
   const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({
-    viewport: VIEWPORT,
+    viewport: project.viewport ?? VIEWPORT,
     recordVideo: { dir: tempDir },
   });
 
