@@ -12,6 +12,7 @@ export const translations = {
       tag: '// portafolio',
       greeting: '¡Hola! Soy',
       role: 'Web Developer',
+      projects: 'Ver proyectos',
       scroll: 'scroll'
     },
     about: {
@@ -111,6 +112,7 @@ export const translations = {
       tag: '// portfolio',
       greeting: "Hello! I'm",
       role: 'Web Developer',
+      projects: 'View projects',
       scroll: 'scroll'
     },
     about: {

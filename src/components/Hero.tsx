@@ -32,6 +32,10 @@ export const Hero = () => {
           <p className="hero-typewriter">
             <TypeWriter strings={lang === 'es' ? esStrings : enStrings} />
           </p>
+          <a href="#projects" className="hero-cta">
+            {t.hero.projects}
+            <span aria-hidden="true">↓</span>
+          </a>
         </div>
         <div className="hero-visual">
           <img

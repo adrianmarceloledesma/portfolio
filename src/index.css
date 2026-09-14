@@ -373,6 +373,35 @@ nav {
   animation: fadeUp 0.35s ease forwards 0.3s;
 }
 
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--blue);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeUp 0.35s ease forwards 0.45s;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.hero-cta:hover {
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+}
+
+.hero-cta:focus-visible {
+  outline: 2px solid var(--blue-dark);
+  outline-offset: 3px;
+}
+
 .about-content {
   margin-top: 1.5rem;
 }
@@ -425,6 +454,7 @@ section {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  scroll-margin-top: 4rem;
 }
 
 @media (max-width: 480px) {
