@@ -16,6 +16,7 @@ export const Projects = () => {
             <ProjectMedia
               video={project.video}
               image={project.image}
+              images={project.images}
               title={project.title}
               demoLink={project.demoLink}
               sectionVisible={isVisible}

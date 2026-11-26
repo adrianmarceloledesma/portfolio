@@ -4,6 +4,9 @@ import deleaturVideo from '../assets/projects/deleatur.mp4'
 import myTasksVideo from '../assets/projects/mytasks.mp4'
 import triviaGameVideo from '../assets/projects/trivia-game.mp4'
 import historianChatbotVideo from '../assets/projects/historian-chatbot.mp4'
+import duoExpenses from '../assets/projects/duo-expenses.png'
+import duoShared from '../assets/projects/duo-shared.png'
+import duoSavings from '../assets/projects/duo-savings.png'
 
 export interface Project {
   id: number;
@@ -13,10 +16,19 @@ export interface Project {
   githubLink?: string;
   demoLink?: string;
   image?: string;
+  images?: string[];
   video?: string;
 }
 
 export const projects: Project[] = [
+  {
+    id: 5,
+    title: 'Duo',
+    description: 'Android app for personal and shared finances.',
+    technologies: ['React Native', 'Expo', 'TypeScript', 'Supabase'],
+    githubLink: 'https://github.com/adrianmarceloledesma/duo-android',
+    images: [duoExpenses, duoShared, duoSavings],
+  },
   {
     id: 4,
     title: 'Deleatur',

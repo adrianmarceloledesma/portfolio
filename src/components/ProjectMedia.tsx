@@ -3,12 +3,13 @@ import { useEffect, useRef, type ReactNode } from 'react';
 interface ProjectMediaProps {
   video?: string;
   image?: string;
+  images?: string[];
   title: string;
   demoLink?: string;
   sectionVisible?: boolean;
 }
 
-export const ProjectMedia = ({ video, image, title, demoLink, sectionVisible }: ProjectMediaProps) => {
+export const ProjectMedia = ({ video, image, images, title, demoLink, sectionVisible }: ProjectMediaProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const hasStarted = useRef(false);
 
@@ -32,6 +33,12 @@ export const ProjectMedia = ({ video, image, title, demoLink, sectionVisible }: 
         (e.target as HTMLVideoElement).style.display = 'none';
       }}
     />
+  ) : images?.length ? (
+    <div className="project-image project-image-gallery" role="group" aria-label={`${title} screenshots`}>
+      {images.map((src, index) => (
+        <img key={src} src={src} alt={`${title} ${index + 1}`} loading="lazy" />
+      ))}
+    </div>
   ) : image ? (
     <img
       src={image}

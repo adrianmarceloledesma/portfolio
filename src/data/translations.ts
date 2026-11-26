@@ -64,6 +64,10 @@ export const translations = {
       title: 'Portfolio',
       items: [
         {
+          id: 5,
+          description: 'Aplicación Android para gestionar gastos, ahorros y finanzas personales y compartidas.'
+        },
+        {
           id: 4,
           description: 'Sitio web profesional para servicios de corrección, transcripción y normalización de textos'
         },
@@ -163,6 +167,10 @@ export const translations = {
       label: '// projects',
       title: 'Portfolio',
       items: [
+        {
+          id: 5,
+          description: 'Android app for managing expenses, savings, and personal and shared finances.'
+        },
         {
           id: 4,
           description: 'Professional website for proofreading, transcription and text normalization services'
