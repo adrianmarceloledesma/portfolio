@@ -7,6 +7,7 @@ import historianChatbotVideo from '../assets/projects/historian-chatbot.mp4'
 import duoExpenses from '../assets/projects/duo-expenses.png'
 import duoShared from '../assets/projects/duo-shared.png'
 import duoSavings from '../assets/projects/duo-savings.png'
+import duoVideo from '../assets/projects/duo.mp4'
 
 export interface Project {
   id: number;
@@ -37,6 +38,7 @@ export const projects: Project[] = [
     technologies: ['React Native', 'Expo', 'TypeScript', 'Supabase'],
     githubLink: 'https://github.com/adrianmarceloledesma/duo-android',
     images: [duoExpenses, duoShared, duoSavings],
+    video: duoVideo,
   },
   {
     id: 3,

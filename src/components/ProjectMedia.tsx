@@ -24,7 +24,7 @@ export const ProjectMedia = ({ video, image, images, title, demoLink, sectionVis
     <video
       ref={videoRef}
       src={video}
-      poster={image}
+      poster={image ?? images?.[0]}
       loop
       muted
       playsInline
