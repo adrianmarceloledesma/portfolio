@@ -62,6 +62,8 @@ export const translations = {
     projects: {
       label: '// proyectos',
       title: 'Portfolio',
+      expandVideo: 'Ampliar video',
+      closeVideo: 'Cerrar video',
       items: [
         {
           id: 5,
@@ -166,6 +168,8 @@ export const translations = {
     projects: {
       label: '// projects',
       title: 'Portfolio',
+      expandVideo: 'Expand video',
+      closeVideo: 'Close video',
       items: [
         {
           id: 5,

@@ -20,6 +20,7 @@ export interface Project {
   images?: string[];
   video?: string;
   playbackRate?: number;
+  expandableVideo?: boolean;
 }
 
 export const projects: Project[] = [
@@ -41,6 +42,7 @@ export const projects: Project[] = [
     images: [duoExpenses, duoShared, duoSavings],
     video: duoVideo,
     playbackRate: 1.25,
+    expandableVideo: true,
   },
   {
     id: 3,

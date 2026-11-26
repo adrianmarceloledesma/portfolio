@@ -16,6 +16,9 @@ export const Projects = () => {
             <ProjectMedia
               video={project.video}
               playbackRate={project.playbackRate}
+              expandableVideo={project.expandableVideo}
+              expandLabel={t.projects.expandVideo}
+              closeLabel={t.projects.closeVideo}
               image={project.image}
               images={project.images}
               title={project.title}

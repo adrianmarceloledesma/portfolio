@@ -1025,6 +1025,78 @@ section {
   object-fit: contain;
 }
 
+.project-video-trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.project-video-trigger:focus-visible, .project-video-close:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.project-video-expand {
+  position: absolute;
+  right: 0.6rem;
+  bottom: 2.1rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.25rem;
+  background: rgba(15, 27, 45, 0.85);
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+.project-video-dialog {
+  width: min(960px, calc(100% - 2rem));
+  max-width: none;
+  max-height: calc(100% - 2rem);
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.3);
+}
+
+.project-video-dialog::backdrop { background: rgba(8, 15, 25, 0.78); }
+
+.project-video-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.project-video-close {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.project-video-large {
+  display: block;
+  width: 100%;
+  max-height: calc(100vh - 8rem);
+  background: #000;
+}
+
 .contact-inner {
   display: grid;
   grid-template-columns: 1fr;
