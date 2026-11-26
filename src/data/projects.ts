@@ -22,14 +22,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 5,
-    title: 'Duo',
-    description: 'Android app for personal and shared finances.',
-    technologies: ['React Native', 'Expo', 'TypeScript', 'Supabase'],
-    githubLink: 'https://github.com/adrianmarceloledesma/duo-android',
-    images: [duoExpenses, duoShared, duoSavings],
-  },
-  {
     id: 4,
     title: 'Deleatur',
     description: 'Sitio web profesional para servicios de corrección, transcripción y normalización de textos con CMS headless.',
@@ -37,6 +29,14 @@ export const projects: Project[] = [
     demoLink: 'https://deleaturservicioseditoriales.vercel.app/',
     image: deleaturImg,
     video: deleaturVideo,
+  },
+  {
+    id: 5,
+    title: 'Duo',
+    description: 'Android app for personal and shared finances.',
+    technologies: ['React Native', 'Expo', 'TypeScript', 'Supabase'],
+    githubLink: 'https://github.com/adrianmarceloledesma/duo-android',
+    images: [duoExpenses, duoShared, duoSavings],
   },
   {
     id: 3,
