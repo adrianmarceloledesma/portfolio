@@ -19,6 +19,7 @@ export interface Project {
   image?: string;
   images?: string[];
   video?: string;
+  playbackRate?: number;
 }
 
 export const projects: Project[] = [
@@ -39,6 +40,7 @@ export const projects: Project[] = [
     githubLink: 'https://github.com/adrianmarceloledesma/duo-android',
     images: [duoExpenses, duoShared, duoSavings],
     video: duoVideo,
+    playbackRate: 1.25,
   },
   {
     id: 3,

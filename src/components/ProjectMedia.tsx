@@ -2,6 +2,7 @@ import { useEffect, useRef, type ReactNode } from 'react';
 
 interface ProjectMediaProps {
   video?: string;
+  playbackRate?: number;
   image?: string;
   images?: string[];
   title: string;
@@ -9,16 +10,17 @@ interface ProjectMediaProps {
   sectionVisible?: boolean;
 }
 
-export const ProjectMedia = ({ video, image, images, title, demoLink, sectionVisible }: ProjectMediaProps) => {
+export const ProjectMedia = ({ video, image, images, title, demoLink, sectionVisible, playbackRate = 1 }: ProjectMediaProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const hasStarted = useRef(false);
 
   useEffect(() => {
+    if (videoRef.current) videoRef.current.playbackRate = playbackRate;
     if (sectionVisible && videoRef.current && !hasStarted.current) {
       hasStarted.current = true;
       videoRef.current.play();
     }
-  }, [sectionVisible]);
+  }, [sectionVisible, playbackRate]);
 
   const content: ReactNode | null = video ? (
     <video

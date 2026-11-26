@@ -15,6 +15,7 @@ export const Projects = () => {
           <article key={project.id} className="project-card" style={{ transitionDelay: `${index * 0.06}s` }}>
             <ProjectMedia
               video={project.video}
+              playbackRate={project.playbackRate}
               image={project.image}
               images={project.images}
               title={project.title}
