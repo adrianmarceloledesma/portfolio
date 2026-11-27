@@ -37,7 +37,7 @@ export const projects: Project[] = [
     id: 5,
     title: 'Duo',
     description: 'Android app for personal and shared finances.',
-    technologies: ['React Native', 'Expo', 'TypeScript', 'Supabase'],
+    technologies: ['React Native', 'Expo', 'TypeScript', 'Supabase', 'Firebase Cloud Messaging'],
     githubLink: 'https://github.com/adrianmarceloledesma/duo-android',
     images: [duoExpenses, duoShared, duoSavings],
     video: duoVideo,
